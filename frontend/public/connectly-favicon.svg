@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <radialGradient id="shine" cx="28%" cy="20%" r="28%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tile" x1="10" y1="8" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#b065ff"/>
+      <stop offset=".48" stop-color="#7c3ff0"/>
+      <stop offset="1" stop-color="#2839d4"/>
+    </linearGradient>
+    <linearGradient id="bubble" x1="22" y1="20" x2="43" y2="43" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f4efff"/>
+      <stop offset="1" stop-color="#baa8e8"/>
+    </linearGradient>
+  </defs>
+  <rect x="7" y="7" width="50" height="50" rx="15" fill="url(#tile)"/>
+  <rect x="7" y="7" width="50" height="50" rx="15" fill="url(#shine)"/>
+  <rect x="7" y="7" width="50" height="50" rx="15" fill="none" stroke="#caa8ff" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M20 24c0-4 3.3-7.3 7.3-7.3h14.1c4 0 7.3 3.3 7.3 7.3v9.8c0 4-3.3 7.3-7.3 7.3H31.2L21.8 49l1.4-8.2A7.3 7.3 0 0 1 20 34.7V24Z" fill="url(#bubble)"/>
+</svg>
