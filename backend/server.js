@@ -134,10 +134,16 @@ io.on('connection', (socket) => {
   });
 });
 
+
+app.get("/", (req, res) => {
+  res.send("Backend is running successfully");
+});
 // Health check endpoint
 app.get('/api/health', (req, res) => {
   res.json({ message: 'Server is running' });
 });
+
+
 
 const PORT = process.env.PORT || 5000;
 
