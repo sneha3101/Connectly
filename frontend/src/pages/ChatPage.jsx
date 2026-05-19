@@ -246,11 +246,8 @@ const ChatPage = () => {
 
         <section className="conversation-panel">
           <header className="conversation-header">
-            <div><span>#</span><strong>general</strong><small>Chat about anything here!</small></div>
-            <div className="header-actions">
-              <button type="button" className="clear-chat-button" onClick={handleClearChat}>Clear chat</button>
-              <div className="header-icons"><span>●</span><span>♟</span><input aria-label="Search" /><span>?</span></div>
-            </div>
+            <strong>Start Connecting</strong>
+            <button type="button" className="clear-chat-button" onClick={handleClearChat}>Clear Chat</button>
           </header>
 
           <div className="conversation-body">

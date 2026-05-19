@@ -91,18 +91,11 @@ const LoginPage = () => {
               <input type="checkbox" />
               <span>Remember me</span>
             </label>
-            <a href="#forgot">Forgot Password?</a>
           </div>
 
           <button type="submit" disabled={loading} className="login-submit">
             {loading ? 'Logging in...' : 'Login'}
           </button>
-
-          <div className="divider"><span>or continue with</span></div>
-          <div className="social-row">
-            <button type="button"><span>G</span> Continue with Google</button>
-            <button type="button"><span>⌁</span> Continue with Discord</button>
-          </div>
 
           <p className="signup-copy">
             Don't have an account? <Link to="/register">Sign up</Link>

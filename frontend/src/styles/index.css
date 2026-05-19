@@ -14,7 +14,10 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 body {
   min-height: 100vh;
   font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
@@ -23,6 +26,7 @@ body {
     radial-gradient(circle at 18% 0%, rgba(124,63,240,.38), transparent 32%),
     radial-gradient(circle at 80% 24%, rgba(60,72,190,.18), transparent 30%),
     linear-gradient(180deg, #170e3b 0%, #090a1a 72%);
+  overflow-x: hidden;
 }
 .page-transition {
   min-height: 100vh;
@@ -412,7 +416,7 @@ button { border: 0; cursor: pointer; }
 .login-panel input:focus { border-color: rgba(144,88,255,.74); box-shadow: 0 0 0 3px rgba(144,88,255,.14); }
 .password-field { position: relative; }
 .password-field span { position: absolute; right: 14px; top: 20px; color: var(--muted); }
-.login-options { display: flex; justify-content: space-between; align-items: center; margin-bottom: 22px; }
+.login-options { display: flex; align-items: center; margin-bottom: 22px; }
 .remember-row { display: inline-flex !important; align-items: center; gap: 8px; margin: 0 !important; font-weight: 600 !important; }
 .remember-row input { width: 16px; min-height: 16px; margin: 0; accent-color: var(--purple); }
 .login-options a, .signup-copy a { color: #a75cff; font-weight: 800; }
@@ -987,6 +991,27 @@ button, a, .chip-check, .profile-card, .channel-row, .dm-row, .status-pill, inpu
 
 @media (max-width: 680px) {
   .showcase-page, .login-page { padding: 10px; }
+  .login-frame {
+    padding: 24px 16px 22px;
+    gap: 18px;
+  }
+  .login-brand {
+    justify-self: start;
+  }
+  .login-welcome {
+    margin-top: 8px;
+  }
+  .login-welcome h1 {
+    font-size: 36px;
+  }
+  .bubble-illustration {
+    width: 100%;
+    height: 210px;
+    margin-top: 8px;
+  }
+  .login-panel {
+    padding: 24px;
+  }
   .mockup-label { font-size: 18px; }
   .hero-copy h1 { font-size: 42px; }
   .hero-copy p { font-size: 18px; }
@@ -1000,4 +1025,107 @@ button, a, .chip-check, .profile-card, .channel-row, .dm-row, .status-pill, inpu
   .settings-shell { grid-template-columns: 1fr; margin-top: 0; border-radius: 0; }
   .settings-sidebar { display: none; }
   .account-card { width: 100%; }
+  .glass-nav {
+    width: calc(100% - 20px);
+    margin: 10px auto 0;
+    border-radius: 12px;
+  }
+  .nav-content {
+    height: auto;
+    min-height: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 10px;
+  }
+  .brand {
+    justify-content: center;
+    font-size: 17px;
+  }
+  .brand-mark-small {
+    width: 26px;
+    height: 26px;
+    margin-right: 8px;
+    border-radius: 8px;
+  }
+  .brand-mark-small::before {
+    width: 15px;
+    height: 10px;
+  }
+  .brand-mark-small::after {
+    left: 9px;
+    bottom: 7px;
+    width: 6px;
+    height: 6px;
+  }
+  .nav-links {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+  }
+  .nav-link,
+  .ghost-button {
+    min-width: 0;
+    min-height: 36px;
+    padding: 0 4px;
+    border-radius: 8px;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  .page-content,
+  .settings-content {
+    width: 100%;
+    padding: 20px 10px;
+  }
+  .page-header h1 {
+    font-size: 25px;
+  }
+  .page-header p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  .discover-layout {
+    gap: 16px;
+  }
+  .auth-card,
+  .panel,
+  .filter-panel,
+  .profile-card,
+  .settings-card {
+    padding: 16px;
+    border-radius: 10px;
+  }
+  .filter-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .chip-check {
+    min-width: 0;
+    justify-content: flex-start;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .chip-check input {
+    flex: 0 0 14px;
+    width: 14px;
+    min-height: 14px;
+    height: 14px;
+    margin: 0;
+  }
+  .chip-text {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    font-size: 12px;
+    line-height: 1.2;
+  }
+  .profiles-grid,
+  .feature-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .profile-card-header {
+    gap: 10px;
+    align-items: flex-start;
+  }
 }
